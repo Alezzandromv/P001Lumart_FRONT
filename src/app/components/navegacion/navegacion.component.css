@@ -1,0 +1,10 @@
+a{
+    font-family: "afacad";
+}
+a:hover{
+    filter: brightness(92%);
+}
+.menu-active{
+    background: #FF4837;
+    color: #fff;
+}

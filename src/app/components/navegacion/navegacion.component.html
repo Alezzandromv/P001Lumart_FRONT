@@ -1,0 +1,65 @@
+<header class="h-[100vh] w-[100%] bg-white flex flex-col items-center
+               p-10">
+    <img class="h-[80px] select-none" src="logoLumart.png" alt="" draggable="false">
+
+    <nav class="flex flex-col w-[100%] mt-10 justify-between h-[100%]">
+       <div class="flex flex-col gap-2">
+        <!--Inicio-->
+        <a class="bg-[#fff] w-[100%] px-4 py-3 text-[18px] font-semibold rounded-2xl
+                  flex gap-3 items-center text-[#7A7A7A]" 
+        [routerLink]="['/dashboard']" routerLinkActive="menu-active">
+            <i class="fa-solid fa-house"></i>
+            Inicio
+        </a>
+        <!--Produccion-->
+        <a class="bg-[#fff] w-[100%] px-4 py-3 text-[18px] font-semibold rounded-2xl
+                  flex gap-3 items-center text-[#7A7A7A]" 
+        [routerLink]="['/dashboard']">
+            <i class="fa-solid fa-boxes-packing"></i>
+            Produccion
+        </a>
+        <!--Inventario-->
+        <a class="bg-[#fff] w-[100%] px-4 py-3 text-[18px] font-semibold rounded-2xl
+                  flex gap-3 items-center text-[#7A7A7A]" 
+        [routerLink]="['/inventario']" routerLinkActive="menu-active">
+            <i class="fa-solid fa-box"></i>
+            Inventario
+        </a>
+        <!--Ventas-->
+        <a class="bg-[#fff] w-[100%] px-4 py-3 text-[18px] font-semibold rounded-2xl
+                  flex gap-3 items-center text-[#7A7A7A]" 
+        [routerLink]="['/dashboard']">
+            <i class="fa-solid fa-chart-simple"></i>
+            Ventas
+        </a>
+        <!--RRHH-->
+        <a class="bg-[#fff] w-[100%] px-4 py-3 text-[18px] font-semibold rounded-2xl
+                  flex gap-3 items-center text-[#7A7A7A]" 
+        [routerLink]="['/dashboard']">
+            <i class="fa-solid fa-coins"></i>
+            Recursos Humanos
+        </a>
+        <!--Cotizaciones-->
+        <a class="bg-[#fff] w-[100%] px-4 py-3 text-[18px] font-semibold rounded-2xl
+                  flex gap-3 items-center text-[#7A7A7A]" 
+        [routerLink]="['/dashboard']">
+            <i class="fa-solid fa-clipboard-list"></i>
+            Cotizaciones
+        </a>
+        <!--Ajustes-->
+        <a class="bg-[#fff] w-[100%] px-4 py-3 text-[18px] font-semibold rounded-2xl
+                  flex gap-3 items-center text-[#7A7A7A]" 
+        [routerLink]="['/dashboard']">
+            <i class="fa-solid fa-gear"></i>
+            Ajustes
+        </a>
+    </div>
+    <!--Cerras sesion-->
+        <a class="bg-[#fff] w-[100%] px-4 py-3 text-[18px] font-semibold rounded-2xl
+                  flex gap-3 items-center text-[#7A7A7A]" 
+                 (click)="cerrarSesion()">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Salir
+        </a>
+    </nav>
+</header>

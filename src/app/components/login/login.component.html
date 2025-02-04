@@ -1,0 +1,32 @@
+<body>
+    <main class="flex justify-between">
+        <img class="h-[100vh] grow object-cover" src="fondoLogin.png" alt="">
+
+        <form [formGroup]="loginForm" (ngSubmit)="onLogin()" class="grow flex flex-col items-center justify-between py-14" action="">
+            <img class="h-[100px]" src="logoLumart.png" alt="">
+            <div class="flex flex-col items-center w-[80%] gap-3">
+                <h1 class="text-[70px] font-[afacad] font-medium">Ingresar</h1>
+
+                <input id="email" formControlName="email" class="border-2 border-[#B2B2B2] placeholder-[#7A7A7A] 
+                rounded-[20px] text-[20px] w-[80%] px-5 py-3 font-[afacad]" type="email" placeholder="Correo Electrónico"
+                required="">
+
+                <input id="password" formControlName="password" class="border-2 border-[#B2B2B2] placeholder-[#7A7A7A] 
+                rounded-[20px] text-[20px] w-[80%] px-5 py-3 font-[afacad]" type="password" placeholder="Contraseña"
+                required="">
+
+                <input class="bg-[#FF001D] rounded-[20px] text-[25px] w-[80%] px-5 py-3
+                text-white font-[afacad] font-bold" type="submit" value="Ingresar">
+
+                <a class="text-[18px] font-medium" href="">
+                    recuperar contraseña</a>
+            </div>
+            <div class="text-center font-medium text-[15px]">
+                Creado por Backup Studio <br>
+                <span class="text-[#FF001D]">Términos y Servicios</span> y 
+                <span class="text-[#FF001D]">Política de Privacidad</span>
+            </div>
+
+        </form>
+    </main>
+</body>
