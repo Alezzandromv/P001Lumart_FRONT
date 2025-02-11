@@ -2,3 +2,70 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* Estilo para el snackbar de éxito */
+.success-snack-bar {
+    background-color: rgba(76, 175, 80, 0.9); /* Fondo verde semitransparente */
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    border-radius: 4px; /* Bordes redondeados */
+    padding: 10px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    animation: fadeIn 0.3s ease-out;
+  }
+  
+  /* Estilo para el snackbar de error */
+  .error-snack-bar {
+    background-color: rgba(244, 67, 54, 0.9); /* Fondo rojo semitransparente */
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    border-radius: 4px;
+    padding: 10px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    animation: fadeIn 0.3s ease-out;
+  }
+  
+  /* Estilos para el botón de cierre del snackbar */
+  ::ng-deep .mat-snack-bar-container .mat-button {
+    background-color: transparent;
+    color: white !important; /* Aseguramos que el color del texto sea blanco */
+    font-size: 16px;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: 600;
+  }
+  
+  ::ng-deep .mat-snack-bar-container .mat-button:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo translúcido al pasar el mouse */
+    color: #4CAF50 !important; /* Color verde al pasar el mouse */
+  }
+  
+  ::ng-deep .mat-snack-bar-container .mat-button:focus {
+    outline: none; /* Remueve el borde de enfoque predeterminado */
+    background-color: rgba(255, 255, 255, 0.3); /* Fondo cuando está en foco */
+    color: #4CAF50 !important; /* Color verde al enfocar */
+  }
+  
+  /* Animación para el snackbar */
+  @keyframes fadeIn {
+    from {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  

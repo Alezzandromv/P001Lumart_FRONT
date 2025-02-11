@@ -3,17 +3,28 @@ import { HttpClient } from '@angular/common/http';
 import { map, Observable } from 'rxjs';
 
 @Injectable({
-    providedIn: 'root',
+  providedIn: 'root',
 })
 export class ProductoService {
-    private apiUrl = 'http://localhost:4000/api/productos';
+  private apiUrl = 'http://localhost:4000/api/productos';
 
-    constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {}
 
-    obtenerProductos(): Observable<any[]> {
-        return this.http.get<any>(this.apiUrl).pipe(  // Cambia la respuesta a 'any' para tener el objeto completo
-          map(response => response.productos)  // Accede a la propiedad 'productos' que contiene el array
-        );
-      }
+  obtenerProductos(page: number = 1, limit: number = 50, searchTerm: string = '') {
+    return this.http.get<{ productos: any[], total: number }>(
+      `${this.apiUrl}/?page=${page}&limit=${limit}&searchTerm=${searchTerm}`
+    );
+  }
 
+  crearProducto(data: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}`, data);
+  }
+
+  actualizarProducto(id:string,data: any): Observable<any> {
+    return this.http.put(`${this.apiUrl}/${id}`, data);
+  }
+
+  eliminarProducto(id:string,data: any): Observable<any> {
+    return this.http.delete(`${this.apiUrl}/${id}`, data);
+  }
 }
